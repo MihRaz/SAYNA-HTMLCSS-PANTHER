@@ -10,8 +10,10 @@ html {
 /* Ajout de l'image de fond */
 body {
     background-image: url("All-pages/arrière_plan.png");
+    background-size: cover;
     color: white;
 }
+
  /*animation globale*/
 header,
 main,
@@ -47,12 +49,12 @@ footer {
     }
 
     /* Positionnement des éléments du header*/
-    nav {
+    .navigation {
         position: relative;
         display: flex;
         align-items: center;
         width: 85%;
-        margin: 0 auto;
+        margin: auto;
         padding: 20px;
     }
 
@@ -106,6 +108,48 @@ footer {
     .f1:hover {
         transform: scale(0.8);
     }
+
+/* Les contenus dans la page d'accueil*/
+section {
+    position: relative;
+    display: flex;
+}
+    .black-panther {
+        border: 1px solid red;
+        width: 40%;
+    }
+
+        .panther-home {
+            position: relative;
+            display: flex;
+            border: 1px solid red;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 600px;
+            }
+
+            img #panther-home {
+                position: absolute;
+                width: 100%;
+                height: auto;
+            }
+
+h1 {
+    font-family: 'panthera';
+    font-size: 68px;
+}
+
+    h2 {
+        font-family: 'beyno';
+        font-size: 32px;
+    }
+
+    .contenu {
+        font-family: 'cantarell';
+        font-size: 16px;
+    }
+    
 
     /* Deuxième élément du footer */
     .f2 {
@@ -199,3 +243,5 @@ footer {
         font-family: 'cantarell';
         font-size: 14px;
     }
+
+    

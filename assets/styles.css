@@ -59,7 +59,7 @@ footer {
 
     .menu {
         display: flex;
-        margin-left: 40%;
+        margin-left: 20%;
         margin-right: 0;
     }
 
@@ -79,6 +79,9 @@ footer {
     /* Premier élément du footer*/
     .f1 {
         position: relative;
+        background-image: url("All-pages/footer1.png");
+        background-repeat: no-repeat;
+        background-size: contain;
         margin-left: 350px;
         width: 400px;
         height: 400px;
@@ -86,15 +89,16 @@ footer {
         align-items: center;
         justify-content: center;
         transform: scale(0.7);
+        transition: 0.3s ease;
     }
 
-    .footer-image1,
-    .footer-image2 {
-        display: block;
-        position: absolute;
+    .f1:hover {
+        transform: scale(0.8);
     }
-    .footer-image2 {
-        margin-bottom: 30px;
+
+    .footer-image {
+        display: flex;
+        margin-bottom: 40px ;
     }
 
     /* Deuxième élément du footer */
@@ -109,8 +113,64 @@ footer {
     .f21 {
         padding-right: 130px;
     }
+        .f21 a {
+            text-decoration: none;
+            color: white;
+        }
+            .f21 a:hover {
+                text-decoration: underline;
+            }
+    
+    .f22 .social-network-footer {
+        padding: 5px 5px 5px 5px;
+        transform: scale(0.8);
+        transition: 0.2s ease;
+    }
+        .f22 .social-network-footer:hover {
+            transform: scale(0.9);
+        }
 
     .f23 {
         align-self: flex-end;
         margin-top: 120px;
+    }
+    
+    /* Les polices */
+
+    @font-face {
+        font-family: 'beyno';
+        src: url("police/BEYNO.ttf");
+    }
+    @font-face {
+        font-family: 'cantarell';
+        src: url("police/Cantarell-Regular.ttf");
+    }
+    @font-face {
+        font-family: 'panthera';
+        src: url("police/PantheraRegular-MVZ9J.ttf");
+    }
+    @font-face {
+        font-family: 'wakanda';
+        src: url("police/WakandaForever-Regular.ttf");
+    }
+
+    .menu{
+        font-family: 'beyno';
+        font-size: 32px;
+    }
+
+    #footer-title {
+        font-family: 'cantarell';
+        font-size: 22px;
+        letter-spacing: 28%;
+    }
+
+    footer {
+        font-family: 'cantarell';
+        font-size: 10px;
+    }
+
+    #cantarell-14 {
+        font-family: 'cantarell';
+        font-size: 14px;
     }

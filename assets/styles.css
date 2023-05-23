@@ -30,7 +30,6 @@ footer {
     }
 }
 
-
 /* Mise en forme des éléments du header */
     /* Ajout des styles pour les rubriques*/
     .menu li a {
@@ -70,6 +69,7 @@ footer {
 
 /* Mise en forme du footer et de ses éléments*/
     footer {
+        position: relative;
         background-image: url("All-pages/back_footer.png");
         background-size: cover;
         display: flex;
@@ -82,36 +82,48 @@ footer {
         background-image: url("All-pages/footer1.png");
         background-repeat: no-repeat;
         background-size: contain;
-        margin-left: 350px;
+        background-position: center;
         width: 400px;
         height: 400px;
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: visible;
         transform: scale(0.7);
         transition: 0.3s ease;
+        margin-left: 20%;
     }
+        .f1 a {
+            object-fit: contain;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .footer-image {
+                margin-bottom: 40px;
+            }
 
     .f1:hover {
         transform: scale(0.8);
     }
 
-    .footer-image {
-        display: flex;
-        margin-bottom: 40px ;
-    }
-
     /* Deuxième élément du footer */
     .f2 {
+        position: relative;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;  
-        margin-left: 100px; 
-        margin-right: -120px;  
+        width: 40%;
+        height: 250px; 
+        right: 5%;
+        transform: scale(0.9);
     }
 
     .f21 {
-        padding-right: 130px;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        padding-right:150px;
+        padding-left: 80px; 
     }
         .f21 a {
             text-decoration: none;
@@ -121,18 +133,31 @@ footer {
                 text-decoration: underline;
             }
     
-    .f22 .social-network-footer {
-        padding: 5px 5px 5px 5px;
-        transform: scale(0.8);
-        transition: 0.2s ease;
+    .f22 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
     }
+        .f22 .social-network-footer {
+            padding: 7px 0 7px 0;
+            transform: scale(0.8);
+            transition: 0.2s ease;
+        }
         .f22 .social-network-footer:hover {
             transform: scale(0.9);
         }
+            .f22 > div {
+                display: inline-block;
+            }
 
     .f23 {
-        align-self: flex-end;
+        position: absolute;
+        bottom: 0;
+        left: 0;
         margin-top: 120px;
+        margin-left: 100px;
     }
     
     /* Les polices */

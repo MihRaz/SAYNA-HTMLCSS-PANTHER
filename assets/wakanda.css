@@ -17,7 +17,10 @@ body {
  /*animation globale*/
 header,
 main,
-footer {
+footer,
+.icon-box,
+.line-left,
+.line-right {
     animation: slide 2s ease-in forwards;
 }
 
@@ -31,9 +34,50 @@ footer {
         transform: translateX(0);
     }
 }
+/* Ajout des icônes de réseaux sociaux en haut à gauche*/
+    .icon-box {
+        display: flex;
+        position: fixed;
+        top: 40%;
+        z-index: 3;
+    }
+    
+    .icon-box ul li {
+        padding: 30% 0 30% 100%;
+        display: flex;
+    }
+
+    .icon-box img {
+        width: 25px;
+        height: 25px;
+    }
+    
+.line-left, .line-right {
+    position: fixed;
+    top: 0;
+    width: 2px;
+    background-color: #d77ef0c9;
+    z-index: 3;
+}
+
+  .line-left {
+    margin-left: 1.1%;
+    height: 65.5%;
+  }
+  
+  .line-right {
+    margin-left: 2.8%;
+    height: 38%;
+  }
 
 /* Mise en forme des éléments du header */
     /* Ajout des styles pour les rubriques*/
+header {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
     .menu li a {
         color: white;
         text-decoration: none;
@@ -45,28 +89,30 @@ footer {
 
     .menu li a.active {
         text-decoration: underline;
-        color: #800080;
+        color: #c179d3c9;
     }
 
     /* Positionnement des éléments du header*/
     .navigation {
         position: relative;
         display: flex;
-        align-items: center;
-        width: 85%;
-        margin: auto;
+        width: 100%;
         padding: 20px;
+    }
+
+    header nav a {
+        margin-left: 5%;
     }
 
     .menu {
         display: flex;
-        margin-left: 20%;
-        margin-right: 0;
+        position: absolute;
+        right: 8%;
     }
 
     .menu ul li {
-        display:inline-flex;
-        padding: 0 50px 0 50px;
+        display: inline-flex;
+        padding-left: 120px;
     }
 
 /* Mise en forme du footer et de ses éléments*/

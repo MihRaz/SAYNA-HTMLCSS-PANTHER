@@ -7,6 +7,24 @@ html {
     padding: 0;
 }
 
+/* Les polices */
+@font-face {
+    font-family: 'beyno';
+    src: url("police/BEYNO.ttf");
+}
+@font-face {
+    font-family: 'cantarell';
+    src: url("police/Cantarell-Regular.ttf");
+}
+@font-face {
+    font-family: 'panthera';
+    src: url("police/PantheraRegular-MVZ9J.ttf");
+}
+@font-face {
+    font-family: 'wakanda';
+    src: url("police/WakandaForever-Regular.ttf");
+}
+
 /* Ajout de l'image de fond */
 body {
     background-image: url("All-pages/arrière_plan.png");
@@ -38,20 +56,25 @@ footer,
     .icon-box {
         display: flex;
         position: fixed;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2%;
+        height: 25%;
         top: 40%;
+        margin-left: 1.8%;
         z-index: 3;
     }
     
-    .icon-box ul li {
-        padding: 30% 0 30% 100%;
-        display: flex;
-    }
-
     .icon-box img {
-        width: 25px;
-        height: 25px;
+        display: flex;
+        width: 100%;
+        height: auto;
     }
-    
+        .icon-box img:hover {
+            filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+        } 
+
+/* Mise en place et mise en forme des traits verticaux */
 .line-left, .line-right {
     position: fixed;
     top: 0;
@@ -115,74 +138,48 @@ header {
         padding-left: 120px;
     }
 
+  
 /* Mise en forme du footer et de ses éléments*/
-    footer {
-        position: relative;
-        background-image: url("All-pages/back_footer.png");
-        background-size: cover;
-        display: flex;
-        align-items: center;
-    }
+footer {
+    position: relative;
+    background-image: url("All-pages/back_footer.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
 
-    /* Premier élément du footer*/
-    .f1 {
-        position: relative;
-        background-image: url("All-pages/footer1.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 400px;
-        height: 400px;
-        display: flex;
+/* Premier élément du footer*/
+.f1 {
+    position: relative;
+    background-image: url("All-pages/footer1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    transform: scale(0.7);
+    transition: 0.3s ease;
+    margin-left: 20%;
+}
+    .f1 a {
+        object-fit: contain;
         align-items: center;
         justify-content: center;
-        overflow: visible;
-        transform: scale(0.7);
-        transition: 0.3s ease;
-        margin-left: 20%;
     }
-        .f1 a {
-            object-fit: contain;
-            align-items: center;
-            justify-content: center;
+
+        .footer-image {
+            margin-bottom: 40px;
         }
 
-            .footer-image {
-                margin-bottom: 40px;
-            }
-
-    .f1:hover {
-        transform: scale(0.8);
-    }
-
-/* Mise en forme de contenu*/
-section {
-    position: relative;
-    display: flex;
+.f1:hover {
+    transform: scale(0.8);
 }
 
-/* Mise en forme des polices*/
-h1 {
-    font-family: 'panthera';
-    font-size: 68px;
-}
-
-    h2 {
-        font-family: 'beyno';
-        font-size: 32px;
-    }
-    h3 {
-        font-family: 'wakanda';
-        font-size: 43px;
-    }
-
-    .contenu {
-        font-family: 'cantarell';
-        font-size: 16px;
-    }
-    
-
-    /* Deuxième élément du footer */
+/* Deuxième élément du footer */
     .f2 {
         position: relative;
         display: flex;
@@ -235,26 +232,29 @@ h1 {
         margin-left: 100px;
     }
     
-    /* Les polices */
 
-    @font-face {
+/* Les styles de texte et police */
+h1 {
+    font-family: 'panthera';
+    font-size: 68px;
+    color: #9E91B7 ;
+}
+
+    h2 {
         font-family: 'beyno';
-        src: url("police/BEYNO.ttf");
-    }
-    @font-face {
-        font-family: 'cantarell';
-        src: url("police/Cantarell-Regular.ttf");
-    }
-    @font-face {
-        font-family: 'panthera';
-        src: url("police/PantheraRegular-MVZ9J.ttf");
-    }
-    @font-face {
-        font-family: 'wakanda';
-        src: url("police/WakandaForever-Regular.ttf");
+        font-size: 32px;
+        color: #9E91B7 ;
+        padding-top: 30px;
+        padding-bottom: 20px;
     }
 
-    .menu{
+    .contenu {
+        font-family: 'cantarell';
+        font-size: 16px;
+        color: #FFFF;
+    }
+
+.menu{
         font-family: 'beyno';
         font-size: 32px;
     }
@@ -274,66 +274,3 @@ h1 {
         font-family: 'cantarell';
         font-size: 14px;
     }
-
-    span {
-        font-family: 'wakanda';
-        font-size: 16px;
-    }
-
-    .formulaire {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      
-      .container h2 {
-        text-align: center;
-      }
-      
-      .form-group {
-        margin-bottom: 20px;
-      }
-      
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-      
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      
-      .form-group textarea {
-        height: 100px;
-      }
-      
-      .btn {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        background-color: #4caf50;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 4px;
-      }
-      
-      .popup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        z-index: 9999;
-      }
-  

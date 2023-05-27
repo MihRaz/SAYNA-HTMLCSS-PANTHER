@@ -7,6 +7,24 @@ html {
     padding: 0;
 }
 
+/* Les polices */
+@font-face {
+    font-family: 'beyno';
+    src: url("police/BEYNO.ttf");
+}
+@font-face {
+    font-family: 'cantarell';
+    src: url("police/Cantarell-Regular.ttf");
+}
+@font-face {
+    font-family: 'panthera';
+    src: url("police/PantheraRegular-MVZ9J.ttf");
+}
+@font-face {
+    font-family: 'wakanda';
+    src: url("police/WakandaForever-Regular.ttf");
+}
+
 /* Ajout de l'image de fond */
 body {
     background-image: url("All-pages/arrière_plan.png");
@@ -38,20 +56,25 @@ footer,
     .icon-box {
         display: flex;
         position: fixed;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2%;
+        height: 25%;
         top: 40%;
+        margin-left: 1.8%;
         z-index: 3;
     }
     
-    .icon-box ul li {
-        padding: 30% 0 30% 100%;
-        display: flex;
-    }
-
     .icon-box img {
-        width: 25px;
-        height: 25px;
+        display: flex;
+        width: 100%;
+        height: auto;
     }
-    
+        .icon-box img:hover {
+            filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+        } 
+
+/* Mise en place et mise en forme des traits verticaux */
 .line-left, .line-right {
     position: fixed;
     top: 0;
@@ -115,47 +138,7 @@ header {
         padding-left: 120px;
     }
 
-/* Mise en forme du footer et de ses éléments*/
-    footer {
-        position: relative;
-        background-image: url("All-pages/back_footer.png");
-        background-size: cover;
-        display: flex;
-        align-items: center;
-    }
-
-    /* Premier élément du footer*/
-    .f1 {
-        position: relative;
-        background-image: url("All-pages/footer1.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 400px;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: visible;
-        transform: scale(0.7);
-        transition: 0.3s ease;
-        margin-left: 20%;
-    }
-        .f1 a {
-            object-fit: contain;
-            align-items: center;
-            justify-content: center;
-        }
-
-            .footer-image {
-                margin-bottom: 40px;
-            }
-
-    .f1:hover {
-        transform: scale(0.8);
-    }
-
-/* Première section*/
+/* La première section */
 section {
     position: relative;
     display: flex;
@@ -164,8 +147,8 @@ section {
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 30%;
-        left: 150px;
+        width: 40%;
+        left: 120px;
         top: 50px;
         transform: scale(0.7);
         text-align: justify;
@@ -176,9 +159,9 @@ section {
             display: flex;
             justify-content: center;
             text-align: center;
-            width: 40%;
-            height: 500px;
-            left: 20%;
+            width: 50%;
+            height: 575px;
+            left: 5%;
             }
 
             img #panther-home {
@@ -187,85 +170,33 @@ section {
                 height: auto;
             }
 
-.story {
-    border: 1px solid red;
-    width: 80%;
-    text-align: justify;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.black-profil {
-    border: 1px solid blue;
-    width: 80%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-    .black-profil > div {
-        border: 1px solid yellow;
-    }
-        .black-profil1 {
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .black-profil1 img {
-            display: flex;
-            padding-right: 20%;
-            padding-left: 20%;
-            position: absolute;
-            z-index: 1;
-        }
-        .profil {
-            position: absolute;
-            width: 80%;
-            height: 600px;
-            margin-left: 9%;
-            margin-top:40%;
-            background-color: #fff;
-            border-radius: 20px;
-            transform: scale(0.8);
-
-        }
-        .profil p {
-            margin: 10px;
-            font-size: 16px;
-            z-index: 0;
-        }
-
-            .black-profil1 div table {
-                color: black;
-                margin-top: 58%;
-            }
-            
-
-/* Mise en forme de la section de personnages*/
+/* Mise en forme de la section de personnages */
 .characters {
     width: 100%;
     height: 300px;
-    display: inline-flex;
-    position: relative;
-    overflow: visible;
+    display: flex;
+    position: relative; 
 }
     .characters-containers {
         position: relative;
         margin-left: 10%;
         width: 100%;
+        height: 280px;
         display: flex;
-        overflow: visible;
         background-color: #031436;
+        border: 1px solid green;
+        
     }
         .characters-containers div {
             flex-direction: column;
-            display: flex;
-            width: auto;
-            height: 100%;
+            width: 100%;
+            height: auto;
             transform: scale(0.7);
             padding: 0;
             margin: 2px;
             text-align: justify;
         }
+        
         .characters-containers img {
             display: flex;
             padding: 0;
@@ -275,28 +206,189 @@ section {
             width: auto;
             transition: 0.2s ease;
         }
+
+        .characters-containers img:first-child {
+            margin-left: 3%;
+
+        }
             .characters-containers img:hover {
                 transform: scale(1.1);
                 z-index: 1;
             }
 
-h1 {
-    font-family: 'panthera';
-    font-size: 68px;
+/* Section sur l'historique*/
+.story-profil {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
 }
 
-    h2 {
-        font-family: 'beyno';
-        font-size: 32px;
+/* La partie gauche du contenu */
+.story-left {
+    width: 40%;
+    text-align: justify;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+
+}
+
+/* La partie droite du contenu */
+.profil-right {
+    position: relative;
+    width: 600px;
+    position: relative;
+    flex-direction: column;
+    float: right;
+    margin-right: 5%;
+}
+    .profil-right div:first-child {
+        height: 1100px;
+    }
+    .profil-right div:last-child {
+        text-align: center;
     }
 
-    .contenu {
-        font-family: 'cantarell';
-        font-size: 16px;
-    }
-    
+    .black-profil {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .black-profil img {
+            display: flex;
+            position: absolute;
+            z-index: 1;
+            width: 350px;
+        }
 
-    /* Deuxième élément du footer */
+        /* La partie blanche contenant les informations sur T'Challa */
+        .profil {
+            position: absolute;
+            width: 425px;
+            height: 800px;
+            margin-top:200px;
+            background-color: #fff;
+            border-radius: 20px;
+            color: black;
+            text-align: left;
+            justify-content: left;
+        }
+
+        .profil p,
+        .profil li {
+            margin: 10px;
+            font-size: 16px;
+            z-index: 0;
+            color: black;
+        }
+            .profil p:first-child {
+                margin-top: 300px;
+            }
+
+
+/* Le formulaire */
+.formulaire {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .formulaire h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    height: 100px;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 9999;
+  }
+
+  
+/* Mise en forme du footer et de ses éléments*/
+footer {
+    position: relative;
+    background-image: url("All-pages/back_footer.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+/* Premier élément du footer*/
+.f1 {
+    position: relative;
+    background-image: url("All-pages/footer1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    transform: scale(0.7);
+    transition: 0.3s ease;
+    margin-left: 20%;
+}
+    .f1 a {
+        object-fit: contain;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .footer-image {
+            margin-bottom: 40px;
+        }
+
+.f1:hover {
+    transform: scale(0.8);
+}
+
+/* Deuxième élément du footer */
     .f2 {
         position: relative;
         display: flex;
@@ -349,26 +441,29 @@ h1 {
         margin-left: 100px;
     }
     
-    /* Les polices */
 
-    @font-face {
+/* Les styles de texte et police */
+h1 {
+    font-family: 'panthera';
+    font-size: 68px;
+    color: #9E91B7 ;
+}
+
+    h2 {
         font-family: 'beyno';
-        src: url("police/BEYNO.ttf");
-    }
-    @font-face {
-        font-family: 'cantarell';
-        src: url("police/Cantarell-Regular.ttf");
-    }
-    @font-face {
-        font-family: 'panthera';
-        src: url("police/PantheraRegular-MVZ9J.ttf");
-    }
-    @font-face {
-        font-family: 'wakanda';
-        src: url("police/WakandaForever-Regular.ttf");
+        font-size: 32px;
+        color: #9E91B7 ;
+        padding-top: 30px;
+        padding-bottom: 20px;
     }
 
-    .menu{
+    .contenu {
+        font-family: 'cantarell';
+        font-size: 16px;
+        color: #FFFF;
+    }
+
+.menu{
         font-family: 'beyno';
         font-size: 32px;
     }
@@ -388,61 +483,3 @@ h1 {
         font-family: 'cantarell';
         font-size: 14px;
     }
-
-    .formulaire {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      
-      .formulaire h2 {
-        text-align: center;
-      }
-      
-      .form-group {
-        margin-bottom: 20px;
-      }
-      
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-      
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      
-      .form-group textarea {
-        height: 100px;
-      }
-      
-      .btn {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        background-color: #4caf50;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 4px;
-      }
-      
-      .popup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        z-index: 9999;
-      }
-  

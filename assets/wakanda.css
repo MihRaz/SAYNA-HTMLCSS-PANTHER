@@ -52,6 +52,7 @@ footer,
         transform: translateX(0);
     }
 }
+
 /* Ajout des icônes de réseaux sociaux en haut à gauche*/
     .icon-box {
         display: flex;
@@ -70,9 +71,88 @@ footer,
         width: 100%;
         height: auto;
     }
-        .icon-box img:hover {
+        .icon-box img:hover,
+        .icon-box img:focus {
             filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
         } 
+
+    /* Pour les écrans de 768px maximum */
+        @media screen and (max-width:768px) {
+            .icon-box {
+                display: flex;
+                position: fixed;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 4%;
+                height: 25%;
+                top: 40%;
+                margin-left: 1.8%;
+                z-index: 3;
+            }
+            
+            .icon-box img {
+                display: flex;
+                width: 100%;
+                height: auto;
+            }
+
+            .icon-box img:focus,
+            .icon-box img:hover {
+                filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+            }
+        }
+        
+        /* Pour les écrans de largeur comprise entre 768px et 1024px */
+        @media screen and (min-width:769px) and (max-width:1024px) {
+                .icon-box {
+                    display: flex;
+                    position: fixed;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 4%;
+                    height: 25%;
+                    top: 40%;
+                    margin-left: 1.8%;
+                    z-index: 3;
+                }
+                
+                .icon-box img {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                }
+    
+                .icon-box img:focus,
+                .icon-box img:hover {
+                    filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+                }
+            }
+
+            /* Pour les écrans à largeur entre 1024px et 1320px */
+            @media screen and (min-width:1025px) and (max-width:1319px) {
+                .icon-box {
+                    display: flex;
+                    position: fixed;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 5%;
+                    height: 25%;
+                    top: 40%;
+                    margin-left: 1.8%;
+                    z-index: 3;
+                }
+                
+                .icon-box img {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                }
+    
+                .icon-box img:focus,
+                .icon-box img:hover {
+                    filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+                }
+            }
 
 /* Mise en place et mise en forme des traits verticaux */
 .line-left, .line-right {
@@ -101,21 +181,23 @@ header {
     margin: 0;
     padding: 0;
 }
+
+nav a {
+    text-decoration: none;
+}
     .menu li a {
         color: white;
         text-decoration: none;
     }
-
     .menu li a:hover {
         text-decoration: underline;
     }
-
     .menu li a.active {
         text-decoration: underline;
         color: #c179d3c9;
     }
-
-    /* Positionnement des éléments du header*/
+    
+/* Positionnement des éléments du header*/
     .navigation {
         position: relative;
         display: flex;
@@ -131,12 +213,109 @@ header {
         display: flex;
         position: absolute;
         right: 8%;
+        font-family: 'beyno';
+        font-size: 32px;
     }
-
+    
     .menu ul li {
         display: inline-flex;
         padding-left: 120px;
-    }
+    }      
+
+
+    /* Pour les écrans de 768px max */
+    @media screen and (max-width: 768px) {
+        header {
+            position: relative;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+        }
+            .menu li a {
+                color: white;
+                text-decoration: none;
+            }
+            .menu li a:hover {
+                text-decoration: underline;
+            }
+            .menu li a.active {
+                text-decoration: underline;
+                color: #c179d3c9;
+            }
+            .navigation {
+                position: relative;
+                display: flex;
+                width: 100%;
+                padding: 20px;
+            }
+            header nav a {
+                margin-left: 5%;
+            }
+        
+            .menu {
+                display: flex;
+                position: absolute;
+                right: 3%;
+                font-family: 'beyno';
+                font-size: 18px;
+            }
+            .menu ul li {
+                display: flex;
+                padding-left: 10px;
+                padding-bottom: 12px;
+            }    
+        }
+       
+        /* Pour les écrans à largeur comprise entre 768px et 1024px */
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            header {
+                position: relative;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            
+            nav a {
+                text-decoration: none;
+            }
+                .menu li a {
+                    color: white;
+                    text-decoration: none;
+                }
+                .menu li a:hover {
+                    text-decoration: underline;
+                }
+                .menu li a.active {
+                    text-decoration: underline;
+                    color: #c179d3c9;
+                }
+                .navigation {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    padding: 20px;
+                }
+                header nav a {
+                    margin-left: 5%;
+                }
+            
+                .menu {
+                    display: flex;
+                    position: absolute;
+                    right: 3%;
+                    font-family: 'beyno';
+                    font-size: 18px;
+                }
+                .menu ul li {
+                    display: flex;
+                    padding-left: 10px;
+                    padding-bottom: 12px;
+                } 
+        }
 
 
 /* Mise en forme du footer et de ses éléments*/
@@ -165,6 +344,34 @@ footer {
     transition: 0.3s ease;
     margin-left: 20%;
 }
+    @media screen and (max-width:768px) {
+        footer {
+            display: flex;
+            flex-direction: column;
+        }
+        .f1 {
+            margin-left: 0;
+        }
+    }
+    @media screen and (min-width:769px) and (max-width:1024px) {
+        .f1 {
+            position: relative;
+            background-image: url("All-pages/footer1.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            transform: scale(0.7);
+            transition: 0.3s ease;
+            margin-left: 10%;
+        }
+    }
+
     .f1 a {
         object-fit: contain;
         align-items: center;
@@ -188,6 +395,19 @@ footer {
         right: 5%;
         transform: scale(0.9);
     }
+        @media screen and (max-width:768px) {
+            .f2 {
+                width: 90%;
+            }
+            .f2 div:last-child {
+                margin-left: 30%;
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .f2 {
+                width: 50%;
+            }
+        }
 
     .f21 {
         position: absolute;
@@ -240,13 +460,13 @@ h1 {
     color: #9E91B7 ;
 }
 
-    h2 {
-        font-family: 'beyno';
-        font-size: 32px;
-        color: #9E91B7 ;
-        padding-top: 30px;
-        padding-bottom: 20px;
-    }
+h2 {
+    font-family: 'beyno';
+    font-size: 32px;
+    color: #9E91B7 ;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
 
     .contenu {
         font-family: 'cantarell';
@@ -254,10 +474,6 @@ h1 {
         color: #FFFF;
     }
 
-.menu{
-        font-family: 'beyno';
-        font-size: 32px;
-    }
 
     #footer-title {
         font-family: 'cantarell';

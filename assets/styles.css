@@ -96,11 +96,64 @@ footer,
                 height: auto;
             }
 
-            .icon-box img:focus {
+            .icon-box img:focus,
+            .icon-box img:hover {
                 filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
             }
         }
         
+        /* Pour les écrans de largeur comprise entre 768px et 1024px */
+        @media screen and (min-width:769px) and (max-width:1024px) {
+                .icon-box {
+                    display: flex;
+                    position: fixed;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 4%;
+                    height: 25%;
+                    top: 40%;
+                    margin-left: 1.8%;
+                    z-index: 3;
+                }
+                
+                .icon-box img {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                }
+    
+                .icon-box img:focus,
+                .icon-box img:hover {
+                    filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+                }
+            }
+
+            /* Pour les écrans à largeur entre 1024px et 1320px */
+            @media screen and (min-width:1025px) and (max-width:1319px) {
+                .icon-box {
+                    display: flex;
+                    position: fixed;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 5%;
+                    height: 25%;
+                    top: 40%;
+                    margin-left: 1.8%;
+                    z-index: 3;
+                }
+                
+                .icon-box img {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                }
+    
+                .icon-box img:focus,
+                .icon-box img:hover {
+                    filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+                }
+            }
+
 /* Mise en place et mise en forme des traits verticaux */
 .line-left, .line-right {
     position: fixed;
@@ -127,6 +180,10 @@ header {
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+nav a {
+    text-decoration: none;
 }
     .menu li a {
         color: white;
@@ -163,7 +220,8 @@ header {
     .menu ul li {
         display: inline-flex;
         padding-left: 120px;
-    }
+    }      
+
 
     /* Pour les écrans de 768px max */
     @media screen and (max-width: 768px) {
@@ -172,6 +230,10 @@ header {
             display: flex;
             margin: 0;
             padding: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
         }
             .menu li a {
                 color: white;
@@ -201,12 +263,59 @@ header {
                 font-family: 'beyno';
                 font-size: 18px;
             }
-        }
             .menu ul li {
                 display: flex;
                 padding-left: 10px;
                 padding-bottom: 12px;
-            }          
+            }    
+        }
+       
+        /* Pour les écrans à largeur comprise entre 768px et 1024px */
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            header {
+                position: relative;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            
+            nav a {
+                text-decoration: none;
+            }
+                .menu li a {
+                    color: white;
+                    text-decoration: none;
+                }
+                .menu li a:hover {
+                    text-decoration: underline;
+                }
+                .menu li a.active {
+                    text-decoration: underline;
+                    color: #c179d3c9;
+                }
+                .navigation {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    padding: 20px;
+                }
+                header nav a {
+                    margin-left: 5%;
+                }
+            
+                .menu {
+                    display: flex;
+                    position: absolute;
+                    right: 3%;
+                    font-family: 'beyno';
+                    font-size: 18px;
+                }
+                .menu ul li {
+                    display: flex;
+                    padding-left: 10px;
+                    padding-bottom: 12px;
+                } 
+        }
 
 /* La première section */
 section {
@@ -273,14 +382,12 @@ section {
     width: 100%;
     height: 300px;
     display: flex;
-    position: relative; 
-    overflow: scroll;
+    position: relative;
 }
     .characters-containers {
         position: relative;
         margin-left: 10%;
         width: 100%;
-        overflow: scroll;
         height: 280px;
         display: flex;
         background-color: #031436;    
@@ -308,7 +415,11 @@ section {
         }
             .characters-containers img:hover {
                 z-index: 1;
+                transform: scale(1.1);
             }
+        .characters-containers .contenu {
+            transform: scale(0.8);
+        }
         
         /* Pour les écrans à largeur 768px max */
         @media screen and (max-width: 768px) {
@@ -319,7 +430,8 @@ section {
                 height: 800px;
                 display: flex;
                 flex-direction: column;
-                position: relative; 
+                position: relative;
+                transform: scale(0.8);
             }
                 .characters-containers {
                     position: relative;
@@ -349,6 +461,87 @@ section {
                     }
         }
 
+        /* Pour les écrans à largeur comprise entre 768px et 1024px */
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .characters {
+                overflow: scroll;
+                width: 80%;
+                margin: auto;
+                height: 800px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                transform: scale(0.8);
+            }
+                .characters-containers {
+                    position: relative;
+                    width: 80%;
+                    height: 800px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: scroll;
+                    background-color: #031436;    
+                }
+                    .characters-containers div {
+                        position: relative;
+                        display: flex;
+                        width: 90%;
+                        margin: auto;
+                        height: auto; 
+                        text-align: justify;
+                        padding-bottom: 20px;
+                    }
+                    
+                    .characters-containers img {
+                        display: flex;
+                        padding: 0;
+                        margin: 0;
+                        height: 100%;
+                        width: auto;
+                    }
+        }
+
+        /* Pour les écrans à largeur comprise entre 1024px et 1320px */
+        @media screen and (min-width:1025px) and (max-width:1319px) {
+            .characters {
+                overflow: scroll;
+                width: 60%;
+                margin: auto;
+                height: 800px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                transform: scale(0.8);
+            }
+                .characters-containers {
+                    position: relative;
+                    width: 80%;
+                    height: 800px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: scroll;
+                    background-color: #031436;    
+                }
+                    .characters-containers div {
+                        position: relative;
+                        display: flex;
+                        width: 90%;
+                        margin: auto;
+                        height: auto; 
+                        text-align: justify;
+                        padding-bottom: 20px;
+                    }
+                    
+                    .characters-containers img {
+                        display: flex;
+                        padding: 0;
+                        margin: 0;
+                        height: 100%;
+                        width: auto;
+                    }
+        }
+
+
 /* Section sur l'historique*/
 .story-profil {
     position: relative;
@@ -365,16 +558,34 @@ section {
                 margin-top: 5%;
             }
         }
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .story-profil {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-top: 5%;
+            }
+        }
+        @media screen and (min-width:1025px) and (max-width:1319px) {
+            .story-profil {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 5%;
+            }
+        }
+
 /* La partie gauche du contenu */
 .story-left {
-    width: 40%;
+    width: 60%;
     text-align: justify;
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
-
+    margin-left: 8%;
 }
+
         @media screen and (max-width: 768px) {
             .story-left {
                 width:80%;
@@ -386,14 +597,38 @@ section {
             }
         }
 
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .story-left {
+                width:80%;
+                margin: auto;
+                text-align: justify;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        /* Pour les écrans à largeur comprise entre 1024px et 1320px */
+        @media screen and (min-width:1025px) and (max-width:1319px) {
+            .story-left {
+                width: 50%;
+                margin-left: 7%;
+                text-align: justify;
+                position: relative;
+                display: flex;
+            }
+        }
+
 /* La partie droite du contenu */
 .profil-right {
     position: relative;
-    width: 600px;
+    width: 40%;
     position: relative;
     flex-direction: column;
     float: right;
-    margin-right: 5%;
+    margin-right: 3%;
+    align-items: center;
+
 }
     .profil-right div:first-child {
         height: 1100px;
@@ -417,15 +652,30 @@ section {
 
         /* La partie blanche contenant les informations sur T'Challa */
         .profil {
-            position: absolute;
+            position: relative;
             width: 425px;
             height: 800px;
             margin-top:200px;
             background-color: #fff;
             border-radius: 20px;
             color: black;
-            text-align: left;
-            justify-content: left;
+        }
+        .actor {
+            font-family: 'cantarell';
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .profil ul {
+            display: flex;
+            justify-content: center;
+        }
+        .profil ul li {
+            display: inline-block;
+            background-color: #3D2DA6;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .profil p,
@@ -438,73 +688,276 @@ section {
             .profil p:first-child {
                 margin-top: 300px;
             }
-
+            .profil p:last-child {
+                text-align: left;
+            }
 
         /* Pour les écrans à largeur 768px max */
         @media screen and (max-width: 768px) {
+            .profil-right {
+                position: relative;
+                width: 80%;
+                margin: auto;
+                margin-top: 50px;
+                position: relative;
+                flex-direction: column;
+                float: right;
+            }
+                .profil-right div:first-child {
+                    height: 1100px;
+                }
+                .profil-right div:last-child {
+                    text-align: center;
+                }
+                .black-profil {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .black-profil img {
+                        display: flex;
+                        position: absolute;
+                        z-index: 1;
+                        width: 350px;
+                    }
+            
+                    /* La partie blanche contenant les informations sur T'Challa */
+                    .profil {
+                        position:absolute;
+                        width: 425px;
+                        height: 800px;
+                        margin-top:200px;
+                        background-color: #fff;
+                        border-radius: 20px;
+                        color: black;
+                        text-align: left;
+                        justify-content: left;
+                    }
 
+                    .profil ul {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .profil ul li {
+                        display: inline-block;
+                        background-color: #3D2DA6;
+                        color: #fff;
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
+                    .profil p,
+                    .profil li {
+                        margin: 10px;
+                        font-size: 16px;
+                        z-index: 0;
+                        color: black;
+                    }
+                        .profil p:first-child {
+                            margin-top: 300px;
+                        }            
         }
+
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .profil-right {
+                position: relative;
+                width: 80%;
+                margin: auto;
+                margin-top: 50px;
+                position: relative;
+                flex-direction: column;
+                float: right;
+            }
+                .profil-right div:first-child {
+                    height: 1100px;
+                }
+                .profil-right div:last-child {
+                    text-align: center;
+                }
+            
+                .black-profil {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .black-profil img {
+                        display: flex;
+                        position: absolute;
+                        z-index: 1;
+                        width: 350px;
+                    }
+            
+                    /* La partie blanche contenant les informations sur T'Challa */
+                    .profil {
+                        position: absolute;
+                        width: 425px;
+                        height: 800px;
+                        margin-top:200px;
+                        background-color: #fff;
+                        border-radius: 20px;
+                        color: black;
+                        text-align: left;
+                        justify-content: left;
+                    }
+                    .profil ul {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .profil ul li {
+                        display: inline-block;
+                        background-color: #3D2DA6;
+                        color: #fff;
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
+                    .profil p,
+                    .profil li {
+                        margin: 10px;
+                        font-size: 16px;
+                        z-index: 0;
+                        color: black;
+                    }
+                        .profil p:first-child {
+                            margin-top: 300px;
+                        }
+             }
+        
+        /* Pour les écrans à largeur comprise entre 1024px et 1320px */
+        @media screen and (min-width:1025px) and (max-width:1319px) {
+            .profil-right {
+                position: relative;
+                width: 35%;
+                position: relative;
+                flex-direction: column;
+                float: right;
+                margin-right: 4%;
+                align-items: center;
+            }
+            .profil-right div:first-child {
+                height: 1100px;
+            }
+            .profil-right div:last-child {
+                text-align: center;
+            }
+        
+            .black-profil {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .black-profil img {
+                    display: flex;
+                    position: absolute;
+                    z-index: 1;
+                    width: 350px;
+                }
+        
+                /* La partie blanche contenant les informations sur T'Challa */
+                .profil {
+                    position: absolute;
+                    width: 425px;
+                    height: 800px;
+                    margin-top:200px;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    color: black;
+                    text-align: left;
+                    justify-content: left;
+                }
+                .profil ul {
+                    display: flex;
+                    justify-content: center;
+                }
+                .profil ul li {
+                    display: inline-block;
+                    background-color: #3D2DA6;
+                    color: #fff;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+                .profil p,
+                .profil li {
+                    margin: 10px;
+                    font-size: 16px;
+                    z-index: 0;
+                    color: black;
+                }
+                    .profil p:first-child {
+                        margin-top: 300px;
+                    }
+         }
 
 
 /* Le formulaire */
-.formulaire {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .formulaire h2 {
-    text-align: center;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .form-group input,
-  .form-group textarea {
+.form-container {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-top: 100px;
+    display: flex;
+    background-image: url('Accueil/Pantherhome7.png');
+    position: relative;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 100px;
+}
+
+.form {
+    max-width: 400px;
+    margin: auto;
+    width: 50%;
+    border-radius: 100px;
+    text-align: center;
+    justify-items: center;
+    padding: 50px;
+    background-image: linear-gradient(to bottom, #fff, rgb(255, 255, 255, 0.1));
+    color: #021740;
   }
   
-  .form-group textarea {
-    height: 100px;
+  .form h2 {
+    text-align: center;
+    color: #021740;
+    font-family: 'cantarell';
+    font-size: 24px;
+  }
+
+  ::placeholder {
+        font-family: 'cantarell';
+        font-size: 10px;
+        color: #021740;
+  }
+  
+  input,
+  textarea {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #021740;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: inherit;
   }
   
   .btn {
-    display: block;
-    width: 100%;
+    width: 100px;
     padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 4px;
+    background-color: #F2CEF2;
+    color: #021740;
+    border-radius: 15px;
+    cursor: pointer;
   }
   
   .popup {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     z-index: 9999;
+    display: none;
   }
 
-  
+
 /* Mise en forme du footer et de ses éléments*/
 footer {
     position: relative;
@@ -531,6 +984,34 @@ footer {
     transition: 0.3s ease;
     margin-left: 20%;
 }
+    @media screen and (max-width:768px) {
+        footer {
+            display: flex;
+            flex-direction: column;
+        }
+        .f1 {
+            margin-left: 0;
+        }
+    }
+    @media screen and (min-width:769px) and (max-width:1024px) {
+        .f1 {
+            position: relative;
+            background-image: url("All-pages/footer1.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            transform: scale(0.7);
+            transition: 0.3s ease;
+            margin-left: 10%;
+        }
+    }
+
     .f1 a {
         object-fit: contain;
         align-items: center;
@@ -554,6 +1035,19 @@ footer {
         right: 5%;
         transform: scale(0.9);
     }
+        @media screen and (max-width:768px) {
+            .f2 {
+                width: 90%;
+            }
+            .f2 div:last-child {
+                margin-left: 30%;
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .f2 {
+                width: 50%;
+            }
+        }
 
     .f21 {
         position: absolute;

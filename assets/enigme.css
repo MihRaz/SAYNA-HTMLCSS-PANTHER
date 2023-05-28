@@ -317,7 +317,226 @@ nav a {
                 } 
         }
 
-  
+
+/* Le contenu de la page */
+section {
+    width: 100%;
+    height: auto;
+}
+
+.container-top {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    background-image: url('Enigme/Pantherenigme1.png');
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.top-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 10% 5% 0 auto;
+}
+  .top-right h1 {
+    font-family: 'beyno';
+    padding-bottom: 10px;
+  }
+
+.dora-milaje {
+    position: relative;
+    width: 75%;
+    margin-left: 5%;
+    text-align: justify;
+    background-image: url('Enigme/Pantherenigme2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 90px;
+}
+
+/* Pour les écrans à largeur 768px max */
+@media screen and (max-width: 768px) {
+    .container-top {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background-image: url('Enigme/Pantherenigme1.png');
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+    
+    .top-right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 10% 5% 0 auto;
+    }
+      .top-right h1 {
+        font-family: 'beyno';
+        padding-bottom: 10px;
+      }
+    
+    .dora-milaje {
+        position: relative;
+        width: 80%;
+        margin-left: 5%;
+        text-align: justify;
+        background-image: url('Enigme/Pantherenigme2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 90px;
+    }
+    }
+
+/* Pour les écrans à largeur entre 768px et 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+.container-top {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    background-image: url('Enigme/Pantherenigme1.png');
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.top-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10% 5% 0 auto;
+}
+  .top-right h1 {
+    font-family: 'beyno';
+    padding-bottom: 10px;
+  }
+
+.dora-milaje {
+    position: relative;
+    width: 85%;
+    margin-left: 5%;
+    text-align: justify;
+    background-image: url('Enigme/Pantherenigme2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 90px;
+}
+}
+
+    /* Pour les écrans à largeur entre 1024px et 1320px */
+    @media screen and (min-width: 1025px) and (max-width: 1319px) {
+    .container-top {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background-image: url('Enigme/Pantherenigme1.png');
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+    
+    .top-right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 10% 5% 0 auto;
+    }
+      .top-right h1 {
+        font-family: 'beyno';
+        padding-bottom: 10px;
+      }
+    
+    .dora-milaje {
+        position: relative;
+        width: 75%;
+        margin-left: 5%;
+        text-align: justify;
+        background-image: url('Enigme/Pantherenigme2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 90px;
+    }
+    }
+
+.article {
+    border: 1px solid red;
+    margin-left: 15%;
+    padding-bottom: 70px;
+}
+.article h3 {
+    font-family: 'wakanda';
+    word-spacing: 20px;
+    letter-spacing: 5px;
+    color: #9E91B7;
+}
+.all {
+    border: 1px solid blue;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 5%;
+    align-items: center;
+}
+.alpha-response {
+    border: 1px solid yellow;
+
+}
+    .alphabet {
+        padding-bottom: 120px;
+    }
+    .response {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid red;
+    }
+    .response input[type="text"] {
+        position: relative;
+        background-image: inherit;
+        width: 520px;
+        height: 56px;
+        border: 1px solid #F2CEF2;
+        border-radius: 38px;
+        margin-top: 10px;
+        padding-left: 10px;
+        background-image: url('All-pages/arrière_plan.png');
+    }
+        ::placeholder {
+            color: #F2CEF2;
+        }
+    .btn {
+        display: flex;
+        margin-top: 100px;
+        width: 174px;
+        height: 54px;
+        border-color: rgb(242, 206, 242);
+        border-radius: 38px;
+        background-color: rgb(242, 206, 242);
+        justify-content: center;
+        align-items: center;
+        margin-left: 35%;
+        margin-right: 35%;
+        cursor: pointer;
+    }
+    .btn:hover {
+        box-shadow : 0 0 20px 0 #F2CEF2;
+    }
+
+
 /* Mise en forme du footer et de ses éléments*/
 footer {
     position: relative;

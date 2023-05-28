@@ -344,6 +344,9 @@ section {
     margin-left: 10%;
     z-index: 1;
 }
+    .wakanda-forever h1 {
+        font-family: 'beyno';
+    }
 
 .contain-middle {
     position: relative;

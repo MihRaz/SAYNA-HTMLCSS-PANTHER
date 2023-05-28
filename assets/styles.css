@@ -944,8 +944,14 @@ section {
     padding: 10px;
     background-color: #F2CEF2;
     color: #021740;
-    border-radius: 15px;
+    border-color: #F2CEF2;
+    border-radius: 38px;
+    width: 174px;
+    height: 54px;
     cursor: pointer;
+  }
+  .btn:hover {
+    box-shadow: 0 0 20px 0 #021740;
   }
   
   .popup {

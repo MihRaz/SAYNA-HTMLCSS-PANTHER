@@ -362,6 +362,7 @@ section {
     background-image: url('Wakanda/Pantherwakanda2.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: top center;
     z-index: 0;
     opacity: 0.2;
 }
@@ -374,6 +375,21 @@ section {
     text-align: justify;
     z-index: 1;
 }
+    .video {
+        position: relative;
+        text-align: center;
+    }
+    .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background-image: url('Wakanda/icon_player.png');
+        background-size: cover;
+        cursor: pointer;
+    }
 
 .contain-right {
     margin-top: 100px;
@@ -384,6 +400,203 @@ section {
     z-index: 1;
 }
 
+    /* Pour les écrans à largeur entre 768px et 1024px */
+    @media screen and (min-width: 769px) and (max-width: 1025px) {
+    section {
+        width: 100%;
+    }
+    .contain-top {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-image: url('Wakanda/Pantherwakanda1.png');
+        background-size: cover;
+        background-position: center;
+        height: 800px;
+        z-index: 0;
+    }
+    .wakanda-forever {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        text-align: justify;
+        margin-left: 30%;
+        z-index: 1;
+    }
+    
+    .contain-middle {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 91%;
+        margin: auto;
+        justify-content: space-between;
+        padding-bottom: 100px;
+    }
+    
+    .background-img {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-image: url('Wakanda/Pantherwakanda2.png');
+        background-repeat: repeat;
+        background-size: contain;
+        background-position: top;
+        z-index: 0;
+        opacity: 0.2;
+    }
+    
+    .contain-left {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        width: 91%;
+        margin: auto;
+        text-align: justify;
+        z-index: 1;
+    }
+        .video {
+            position: relative;
+            text-align: center;
+        }
+        iframe {
+            width: 560px;
+            height: 360px;
+        }
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-image: url('Wakanda/icon_player.png');
+            background-size: cover;
+            cursor: pointer;
+        }
+    
+    .contain-right {
+        margin-top: 100px;
+        width: 91%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        z-index: 1;
+    }
+    }
+
+    /* Pour les écrans à largeur inférieure à 768px */
+    @media screen and (max-width: 768px) {
+        section {
+            width: 100%;
+        }
+        .contain-top {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-image: url('Wakanda/Pantherwakanda1.png');
+            background-size: cover;
+            background-position: center;
+            height: 800px;
+            z-index: 0;
+        }
+        .wakanda-forever {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            text-align: justify;
+            margin-left: 20%;
+            z-index: 1;
+        }
+        
+        .contain-middle {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 91%;
+            margin: auto;
+            justify-content: space-between;
+            padding-bottom: 100px;
+        }
+        
+        .background-img {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-image: url('Wakanda/Pantherwakanda2.png');
+            background-repeat: repeat;
+            background-size: contain;
+            background-position: top;
+            z-index: 0;
+            opacity: 0.2;
+        }
+        
+        .contain-left {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            width: 91%;
+            margin: auto;
+            text-align: justify;
+            z-index: 1;
+        }
+            .video {
+                position: relative;
+                text-align: center;
+            }
+            iframe {
+                width: 400px;
+                height: 200px;
+            }
+            .play-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80px;
+                height: 80px;
+                background-image: url('Wakanda/icon_player.png');
+                background-size: cover;
+                cursor: pointer;
+            }
+        
+        .contain-right {
+            margin-top: 100px;
+            width: 91%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            z-index: 1;
+        }
+        }
+
+    /* Pour les écrans à largeur entre 1024px et 1320px */
+    @media screen and (min-width:1025px) and (max-width:1319px) {
+        .video {
+            position: relative;
+            text-align: center;
+        }
+        iframe {
+            width: 400px;
+            height: 250px;
+    }
+    }
+
+    /* Pour les écrans dont la largeur est supérieure à 1319px */
+    @media screen and (min-width: 1320px) {
+        iframe {
+            width: 560px;
+            height: 360px;
+        }
+    }
 
 /* Mise en forme du footer et de ses éléments*/
 footer {

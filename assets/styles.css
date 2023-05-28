@@ -386,8 +386,8 @@ section {
 }
     .characters-containers {
         position: relative;
-        margin-left: 10%;
-        width: 100%;
+        margin-left: 9%;
+        width: 91%;
         height: 280px;
         display: flex;
         background-color: #031436;    
@@ -399,6 +399,7 @@ section {
             padding: 0;
             margin: 5px;
             text-align: justify;
+            transform: scale(0.9);
         }
         
         .characters-containers img {

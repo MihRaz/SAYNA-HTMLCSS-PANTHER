@@ -516,6 +516,7 @@ section {
         ::placeholder {
             color: #F2CEF2;
         }
+        
     .btn {
         display: flex;
         margin-top: 100px;

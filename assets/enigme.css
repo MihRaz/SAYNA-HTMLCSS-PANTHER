@@ -474,7 +474,6 @@ section {
     }
 
 .article {
-    border: 1px solid red;
     margin-left: 15%;
     padding-bottom: 70px;
 }
@@ -485,14 +484,14 @@ section {
     color: #9E91B7;
 }
 .all {
-    border: 1px solid blue;
     display: flex;
     margin-left: 15%;
     margin-right: 5%;
     align-items: center;
+    padding-bottom: 80px;
 }
 .alpha-response {
-    border: 1px solid yellow;
+    width: 60%;
 
 }
     .alphabet {
@@ -502,7 +501,6 @@ section {
         position: relative;
         display: flex;
         flex-direction: column;
-        border: 1px solid red;
     }
     .response input[type="text"] {
         position: relative;
@@ -536,6 +534,83 @@ section {
         box-shadow : 0 0 20px 0 #F2CEF2;
     }
 
+    .tip {
+        width: 50%;
+        margin-left: 70px;
+        background-image: url('Enigme/Pantherenigme2.png');
+        background-position: center;
+        background-size: cover;
+        padding: 80px;
+        text-align: justify;
+    }
+
+    /* Pour les écrans à largeur entre 820px et 1230px */
+    @media screen and (min-width: 820px) and (max-width: 1230px) {
+        .article {
+            width: 92%;
+            margin: auto;
+            padding-bottom: 70px;
+            text-align: center;
+        }
+
+        .all {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 80px;
+        }
+        .alpha-response {
+            width: 60%;
+        
+        }
+            .alphabet {
+                padding-bottom: 120px;
+            }
+            .response {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }   
+            .input {
+                width: 500px;
+            }
+    }
+
+    /* Pour les écrans à largeur maximale de 819px */
+    @media screen and (max-width: 819px) {
+        .article {
+            width: 70%;
+            margin: auto;
+            padding-bottom: 70px;
+            text-align: center;
+        }
+
+        .all {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 80px;
+        }
+        .alpha-response {
+            width: 80%;
+        
+        }
+            .alphabet {
+                padding-bottom: 60px;
+            }
+            .response {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+            .input {
+                width: 200px;
+            }
+        }
 
 /* Mise en forme du footer et de ses éléments*/
 footer {
